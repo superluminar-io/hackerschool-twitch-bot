@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Twitch IRC to SNS Bridge'
+Resources:
+    MessageTopic:
+        Type: AWS::SNS::Topic
+Outputs:
+    MessageTopic:
+        Value: !Ref MessageTopic
+        Export:
+            Name: !Sub "${AWS::StackName}-MessageTopic"
